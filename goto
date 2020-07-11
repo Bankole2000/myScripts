@@ -1,0 +1,24 @@
+#! /usr/bin/bash
+
+GOTOLOCATION=${1? Error: Please enter a location}
+SUBFOLDER=${2:-''}
+
+if [ "$GOTOLOCATION" == "videos" ]
+then 
+  cd ~/Videos/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "projects" ] 
+then 
+  cd /var/www/html/projects/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "documents" ] 
+then 
+  cd ~/Documents/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "scripts" ] 
+then 
+  cd ~/myScripts/$SUBFOLDER 
+fi

@@ -1,0 +1,11 @@
+#! /usr/bin/bash
+
+NAMEOFFILE=${1? Error: please enter a file to open}
+
+if [ -f "$NAMEOFFILE" ]
+then 
+  xdg-open "$NAMEOFFILE"
+elif [ -d "$NAMEOFFILE" ]
+then 
+  nautilus "$NAMEOFFILE"
+fi
