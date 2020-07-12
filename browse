@@ -26,5 +26,5 @@ then
   firefox "localhost/$2"
 elif [ "$NAMEOFURL" == "projects" ]
 then 
-  firefox file:///var/www/html/projects"
+  firefox "file:///var/www/html/projects"
 fi
