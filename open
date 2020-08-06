@@ -2,7 +2,19 @@
 
 NAMEOFFILE=${1? Error: please enter a file to open}
 
-if [ -f "$NAMEOFFILE" ]
+if [ "$NAMEOFFILE" == "stoplight" ]
+then 
+  ~/Downloads/resources/tools/stoplightStudio.AppImage
+elif [ "$NAMEOFFILE" == "gravit" ]
+then 
+  ~/Downloads/resources/tools/GravitDesigner.AppImage
+elif [ "$NAMEOFFILE" == "work" ]
+then 
+  firefox "https://freedcamp.com"
+elif [ "$NAMEOFFILE" == "whatsapp" ]
+then 
+  firefox "https://web.whatsapp.com"
+elif [ -f "$NAMEOFFILE" ]
 then 
   xdg-open "$NAMEOFFILE"
 elif [ -d "$NAMEOFFILE" ]

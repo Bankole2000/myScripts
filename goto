@@ -18,6 +18,42 @@ then
   cd ~/Documents/$SUBFOLDER 
 fi
 
+if [ "$GOTOLOCATION" == "docs" ] 
+then 
+  cd ~/Documents/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "home" ] 
+then 
+  cd $HOME/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "pictures" ] 
+then 
+  cd ~/Pictures/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "downloads" ] 
+then 
+  cd ~/Downloads/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "desktop" ] 
+then 
+  cd ~/Desktop/$SUBFOLDER 
+fi
+
+
+if [ "$GOTOLOCATION" == "work" ] 
+then 
+   firefox "https://freedcamp.com"
+fi
+
+if [ "$GOTOLOCATION" == "pics" ] 
+then 
+  cd ~/Pictures/$SUBFOLDER 
+fi
+
 if [ "$GOTOLOCATION" == "scripts" ] 
 then 
   cd ~/myScripts/$SUBFOLDER 
