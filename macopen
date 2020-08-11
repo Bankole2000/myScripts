@@ -1,0 +1,23 @@
+#! /usr/bin/bash
+
+NAMEOFFILE=${1? Error: please enter a file to open}
+
+if [ "$NAMEOFFILE" == "stoplight" ]
+then 
+  open -a Stoplight\ Studio
+elif [ "$NAMEOFFILE" == "gravit" ]
+then 
+  ~/Downloads/resources/tools/GravitDesigner.AppImage
+elif [ "$NAMEOFFILE" == "work" ]
+then 
+  open -a firefox "https://freedcamp.com"
+elif [ "$NAMEOFFILE" == "whatsapp" ]
+then 
+  open -a firefox "https://web.whatsapp.com"
+elif [ -f "$NAMEOFFILE" ]
+then 
+  xdg-open "$NAMEOFFILE"
+elif [ -d "$NAMEOFFILE" ]
+then 
+  nautilus "$NAMEOFFILE"
+fi

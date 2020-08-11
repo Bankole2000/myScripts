@@ -8,9 +8,24 @@ then
   cd ~/Videos/$SUBFOLDER 
 fi
 
+if [ "$GOTOLOCATION" == "macxprojects" ]
+then 
+  cd ~/.bitnami/stackman/machines/xampp/volumes/root/htdocs/projects/$SUBFOLDER
+fi
+
+if [ "$GOTOLOCATION" == "todos" ]
+then
+  open ~/.bitnami/stackman/machines/xampp/volumes/root/htdocs/projects/todoManager/index.html
+fi
+
 if [ "$GOTOLOCATION" == "projects" ] 
 then 
   cd /var/www/html/projects/$SUBFOLDER 
+fi
+
+if [ "$GOTOLOCATION" == "macprojects" ]
+then
+  cd ~/projects/projects/$SUBFOLDER
 fi
 
 if [ "$GOTOLOCATION" == "documents" ] 

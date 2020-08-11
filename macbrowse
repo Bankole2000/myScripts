@@ -1,0 +1,39 @@
+#! /usr/bin/bash
+
+NAMEOFURL=${1? Error: please enter a url to open}
+NAMEOFADDRESS=${2:-''}
+
+if [ "$NAMEOFURL" == "mail" ]
+then 
+  open -a firefox https://gmail.com
+elif [ "$NAMEOFURL" == "web" ]
+then 
+  open -a firefox "https://$NAMEOFADDRESS.com"
+elif [ "$NAMEOFURL" == "url" ]
+then
+  open -a firefox "$NAMEOFADDRESS"
+elif [ "$NAMEOFURL" == "work" ]
+then 
+  open -a firefox "https://freedcamp.com"
+elif [ "$NAMEOFURL" == "search" ]
+then 
+  open -a firefox "https://google.com/search?q=$2 $3 $4 $5 $6 $7 $8 $9"
+elif [ "$NAMEOFURL" == "here" ]
+then 
+  open -a firefox .
+elif [ "$NAMEOFURL" == "." ]
+then 
+  open -a firefox .
+elif [ "$NAMEOFURL" == "phpmyadmin" ]
+then 
+  open -a firefox "localhost/phpmyadmin"
+elif [ "$NAMEOFURL" == "localhost" ]
+then 
+  open -a firefox "localhost/$2"
+elif [ "$NAMEOFURL" == "port" ]
+then 
+  open -a firefox "localhost:$2"
+elif [ "$NAMEOFURL" == "projects" ]
+then 
+  open -a firefox "file:///var/www/html/projects"
+fi
